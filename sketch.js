@@ -164,11 +164,13 @@ function draw() {
   //tela do jogo
   if(tela==2){
     background(200);
+    text(mouseX+" "+mouseY,50,50)
     
      //objeto 
      stroke(0);
      strokeWeight(5);
-     fill(200,200,0);      
+     fill(200,200,0);
+     rectMode(CENTER);      
      rect(objeto_X, objeto_Y, objeto_W, objeto_H);
      
     //inicio do carregamento de textura e coordenadas do player
@@ -222,10 +224,11 @@ if (keyIsDown(UP_ARROW)||keyIsDown(87)){
 else{pulando=false;}
 gravidade();
 /////////////////////////////////////////////////////
-if(p1x >= objeto_X - objeto_W/2 && p1x <= objeto_X + objeto_W/2 && p1y >= objeto_Y - objeto_H/2 && p1y <= objeto_Y + objeto_H/2 && pulando == false ){
+if(p1x >= 115 && p1x <= 275 && p1y >270 && p1y < 340 && pulando == false ){
   p1y = p1y; // para nao ficar voando
   velocidade = 0;//sem velocidade porque não estamos caindo
   contador_pulo=0;
+  
 }
 
 
